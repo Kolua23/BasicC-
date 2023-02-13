@@ -1,4 +1,4 @@
-#include<iostream>
+﻿#include<iostream>
 #include<ctime>
 #include<string>
 #include<algorithm>
@@ -187,7 +187,7 @@ int main()
 					c++;
 				a /= 10;
 
-				cout << "????? " << c << endl;
+				cout << "íóë³â " << c << endl;
 
 				for (n = 0; a > 0;)
 				{
@@ -195,7 +195,7 @@ int main()
 					a /= 10;
 					n++;
 				}
-				cout << " ????????? ???? = " << n << endl << " " << "sum = " << sum << endl << " ???????? ??????????? = " << sum / n << endl;
+				cout << " ê³ëüê³ñòü öèôð = " << n << endl << " " << "sum = " << sum << endl << " ñóðåäüíå àðèôìåòè÷íå = " << sum / n << endl;
 			}
 
 			system("pause");
@@ -204,11 +204,11 @@ int main()
 		{
 			int h, w, a;
 			setlocale(LC_ALL, "ukr");
-			cout << "?????? ";
+			cout << "øèðèíà ";
 			cin >> h;
-			cout << "??????";
+			cout << "âèñîòà";
 			cin >> w;
-			cout << "????????? ???????? ";
+			cout << "ê³ëüê³÷òü êë³òèíîê ";
 			cin >> a;
 			for (int i = 0; i < h; i++)
 			{
