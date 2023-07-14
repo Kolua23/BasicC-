@@ -80,11 +80,11 @@ void addPerson(vector<Person>& persons)
 	int age;
 	cout << "id";
 	cin >> id;
-	cout << "Введіть ім'я співробітника";
+	cout << "Enter Name";
 	cin >> firstName;
-	cout << "Введіть прізвище співробітника";
+	cout << "Enter lost name";
 	cin >> lostName;
-	cout << "Введіть вік співробітника";
+	cout << "Enter the employee's age";
 	cin >> age;
 	Person personn(id, firstName, lostName, age);
 	persons.push_back(personn);
@@ -100,24 +100,24 @@ void editPerson(vector<Person>& persons)
 	{
 		if (personn.getId() == id)
 		{
-			cout << "Введіть нове  і'мя співробітника:  ";
+			cout <<  "Enter a new employee name: ";
 			string firstName;
 			cin >> firstName;
 			personn.setFirstName(firstName);
-			cout << "Введіть нове прізвище співробіника ";
+			cout << "Enter a new colleague's last name ";
 			string lostName;
 			cin >> lostName;
 			personn.setLostName(lostName);
-			cout << "Введіть новий вік співробітника";
+			cout << "Enter the new age of the employee";
 			int age;
 			cin >> age;
 			personn.setAge(age);
 			safePerson;
-			cout << "Дані збережино ";
+			cout << "The data will be saved";
 			return;
 		}
 	}
-	cout << "Співробітник з таким id не знайдений";
+	cout << "An employee with this id was not found";
 }
 
 void deletePerson(vector<Person>& persons)
@@ -139,7 +139,7 @@ void deletePerson(vector<Person>& persons)
 void namePerson(vector<Person>& persons)
 {
 	string firstName;
-	cout << "Введіть і'мя";
+	cout << "Enter a name";
 	cin >> firstName;
 	vector<Person> namesPersons;
 	for (const Person& personn : persons)
@@ -150,30 +150,30 @@ void namePerson(vector<Person>& persons)
 		}
 	}
 	if (!namesPersons.empty()) {
-		cout << "Результат пошуку ";
+		cout <<  "Search result";
 		for (const Person& personn : namesPersons)
 		{
 			cout << "Id->" << personn.getId() << endl;
-			cout << "І'мя" << personn.getFirstName() << endl;
-			cout << "Прізвище" << personn.getLostName() << endl;
-			cout << "Вік" << personn.getAge() << endl;
+			cout << "Name" << personn.getFirstName() << endl;
+			cout << "Lost Name" << personn.getLostName() << endl;
+			cout << "Age" << personn.getAge() << endl;
 		}
 	}
 	else
 	{
-		cout << "Співробітник з таким іменем не знайдений" << endl;
+		cout << "No employee with this name was found" << endl;
 	}
 }
 
 void printPerson(const  vector<Person>& persons)
 {
-	cout << "Всі співробітники " << endl;
+	cout << "All employees " << endl;
 	for (const Person& personn : persons)
 	{
 		cout << "Id->" << personn.getId() << endl;
-		cout << "І'мя" << personn.getFirstName() << endl;
-		cout << "Прізвище" << personn.getLostName() << endl;
-		cout << "Вік" << personn.getAge() << endl;
+		cout << "Name" << personn.getFirstName() << endl;
+		cout << "Lost Name" << personn.getLostName() << endl;
+		cout << "Age" << personn.getAge() << endl;
 	}
 }
 int main()
@@ -186,14 +186,14 @@ int main()
 	int namber;
 	do
 	{
-		cout << "\t Меню :" << endl;
-		cout << "1: Добавити співробітника " << endl;
-		cout << "2: Редактувати дані " << endl;
-		cout << "3: Видалити співробітника" << endl;
-		cout << "4: Пошук співробітника за прізвищем " << endl;
-		cout << "5: Вивести інформацію про співробітників " << endl;
-		cout << "6: Вийти з програми " << endl;
-		cout << "Введіть номер " << endl;
+		cout << "\t Menu :" << endl;
+		cout << "1: Add an employee " << endl;
+		cout << "2: Edit data " << endl;
+		cout << "3: Delete employee" << endl;
+		cout << "4: Search for an employee by last name" << endl;
+		cout << "5: Display information abour employees " << endl;
+		cout << "6:Exit the program  " << endl;
+		cout << " Enter in namer  " << endl;
 		cin >> namber;
 
 		switch (namber)
@@ -213,7 +213,7 @@ int main()
 			printPerson(persons);
 			break;
 		case 6:
-			cout << "До побачення";
+			cout << "Goodbay";
 			return 0;
 		}
 	} while (true);
